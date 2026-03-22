@@ -9,6 +9,10 @@
     "electron:dev": "concurrently --kill-others \"vite\" \"wait-on http://localhost:5174 && electron .\"",
     "electron:pack": "vite build && electron-builder"
   },
+  "config": {
+    "electron_mirror": "https://npmmirror.com/mirrors/electron/",
+    "electron_builder_binaries_mirror": "https://npmmirror.com/mirrors/electron-builder-binaries/"
+  },
   "build": {
     "appId": "com.example.electronvuetheme",
     "productName": "ElectronVueTheme",

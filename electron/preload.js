@@ -1,5 +1,15 @@
-const { contextBridge } = require('electron')
+const { contextBridge, ipcRenderer } = require('electron')
+const channels = require('./ipc/channels.json')
 
-contextBridge.exposeInMainWorld('appShell', {
-  platform: process.platform
+const shellApi = Object.freeze({
+  isElectron: true,
+  platform: process.platform,
+  getAppMeta() {
+    return ipcRenderer.invoke(channels.app.getMeta)
+  },
+  healthCheck() {
+    return ipcRenderer.invoke(channels.system.healthCheck)
+  }
 })
+
+contextBridge.exposeInMainWorld('appShell', shellApi)

@@ -45,6 +45,13 @@
   font-weight: 600;
 }
 
+.section-head-inline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
 .field-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -105,6 +112,12 @@
 
 .btn:active {
   transform: translateY(0);
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.68;
+  transform: none;
 }
 
 .btn-ghost {
@@ -174,6 +187,18 @@
   line-height: 1.55;
 }
 
+.log-row.level-warn {
+  color: #ffd69a;
+}
+
+.log-row.level-error {
+  color: #ff9e9e;
+}
+
+.log-empty {
+  color: var(--text-secondary);
+}
+
 .slide-panel {
   min-height: 0;
   padding: var(--space-3);
@@ -188,6 +213,59 @@
 
 .slide-panel p {
   color: var(--text-secondary);
+}
+
+.muted {
+  color: var(--text-secondary);
+}
+
+.status-pill {
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.status-pill.is-success {
+  color: #9bf9d0;
+  border-color: rgba(47, 209, 138, 0.45);
+  background: rgba(47, 209, 138, 0.12);
+}
+
+.status-pill.is-warning {
+  color: #ffe3af;
+  border-color: rgba(255, 183, 77, 0.45);
+  background: rgba(255, 183, 77, 0.14);
+}
+
+.error-text {
+  color: #ff9e9e;
+}
+
+.meta-list {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.meta-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.meta-list span {
+  color: var(--text-secondary);
+}
+
+.meta-list code {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 2px 6px;
+  border-radius: 6px;
 }
 
 @media (max-width: 980px) {

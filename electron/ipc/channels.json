@@ -1,0 +1,8 @@
+{
+  "app": {
+    "getMeta": "app/get-meta"
+  },
+  "system": {
+    "healthCheck": "system/health-check"
+  }
+}
