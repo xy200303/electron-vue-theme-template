@@ -1,5 +1,4 @@
 ﻿# Electron Vue Enterprise Starter (Simple)
-
 English | [中文](./README.zh-CN.md)
 
 This is a minimal enterprise-style starter for Electron + Vue:
@@ -8,6 +7,7 @@ This is a minimal enterprise-style starter for Electron + Vue:
 - Secure preload bridge (`contextIsolation + whitelist API`)
 - Single-source IPC channels in `electron/ipc/channels.json`
 - Store-driven renderer state with Pinia
+<img width="1908" height="1271" alt="image" src="https://github.com/user-attachments/assets/ef7783df-a40b-4fb6-893b-51d0d587339d" />
 
 ## Quick Start
 
