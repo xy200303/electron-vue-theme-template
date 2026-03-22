@@ -1,5 +1,7 @@
 # Electron Vue Enterprise Starter (Simple)
 
+<img width="1919" height="1305" alt="image" src="https://github.com/user-attachments/assets/b5364ee0-086a-4aeb-9acb-f6bf708d2b0b" />
+
 English | [中文](./README.zh-CN.md)
 
 This is a minimal enterprise-style starter for Electron + Vue:
