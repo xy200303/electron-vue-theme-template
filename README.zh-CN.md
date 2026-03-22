@@ -2,6 +2,8 @@
 
 [English](./README.md) | 中文
 
+<img width="1919" height="1305" alt="image" src="https://github.com/user-attachments/assets/3961427a-f381-4bb9-991f-e9dec10f6c2d" />
+
 这是一个“尽量简单”的 Electron + Vue 企业级范式模板，保留必要工程能力：
 
 - 主进程分层（`config / windows / ipc / bootstrap`）
