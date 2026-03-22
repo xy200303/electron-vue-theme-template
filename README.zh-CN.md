@@ -9,6 +9,8 @@
 - IPC 通道统一定义在 `electron/ipc/channels.json`
 - 渲染层通过 Pinia store 驱动
 
+<img width="1908" height="1271" alt="image" src="https://github.com/user-attachments/assets/5d99c916-d9bd-46e0-9b64-6afffb3cf9bb" />
+
 ## 快速开始
 
 ```bash
