@@ -1,6 +1,4 @@
-# Electron Vue Enterprise Starter (Simple)
-
-<img width="1919" height="1305" alt="image" src="https://github.com/user-attachments/assets/b5364ee0-086a-4aeb-9acb-f6bf708d2b0b" />
+﻿# Electron Vue Enterprise Starter (Simple)
 
 English | [中文](./README.zh-CN.md)
 
@@ -47,6 +45,43 @@ src/
   stores/app-shell-store.js   # renderer runtime state
   views/DashboardView.vue     # runtime panel demo
 ```
+
+## Why `electron/ipc/channels.json`
+
+`electron/ipc/channels.json` is the single source of truth for IPC channel names.
+
+- Main process reads it when registering handlers (`ipcMain.handle`)
+- Preload reads it when invoking handlers (`ipcRenderer.invoke`)
+- Keeps channel names consistent and avoids hardcoded string mismatches
+
+## Developer Guide
+
+### Add a new IPC capability
+
+1. Add a channel key in `electron/ipc/channels.json`
+2. Register an `ipcMain.handle` in `electron/main/ipc/register-handlers.js`
+3. Expose a safe preload method in `electron/preload.js`
+4. Consume it from a Pinia store (recommended) instead of calling `window.appShell` in many components
+
+### Main-process boundaries
+
+- Keep `electron/main.js` as bootstrap only
+- Put window logic in `electron/main/windows/*`
+- Put runtime/env parsing in `electron/main/config/*`
+- Put app services and handlers in `electron/main/ipc/*`
+
+### Security checklist
+
+- Keep `nodeIntegration: false`
+- Keep `contextIsolation: true`
+- Expose only whitelisted preload methods
+- Validate incoming IPC payloads before touching filesystem/network
+
+### Dev workflow suggestions
+
+- Run `bun run build` before commits
+- Prefer small PRs: one feature or one refactor per commit group
+- Update both `README.md` and `README.zh-CN.md` when docs change
 
 ## Environment Variables
 
