@@ -1,0 +1,29 @@
+:root {
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif;
+  --font-mono: 'Consolas', 'JetBrains Mono', monospace;
+  --bg-canvas: #0a0e17;
+  --bg-panel: #111827;
+  --bg-soft: rgba(255, 255, 255, 0.03);
+  --bg-hover: rgba(255, 255, 255, 0.06);
+  --border-soft: rgba(255, 255, 255, 0.1);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --text-primary: #e5ecff;
+  --text-secondary: #9fb0d6;
+  --brand-primary: #00d4ff;
+  --brand-secondary: #7b2ff7;
+  --success: #2fd18a;
+  --warning: #ffb74d;
+  --danger: #ff6b6b;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --shadow-lg: 0 12px 36px rgba(0, 0, 0, 0.35);
+  --transition-fast: 0.2s ease;
+  --transition-mid: 0.3s ease;
+  --gradient-brand: linear-gradient(135deg, #00d4ff, #7b2ff7);
+}
